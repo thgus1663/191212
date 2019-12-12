@@ -50,6 +50,7 @@ def lunch():
     random_idx = np.random.randint(0, len(menu))
     return render_template('lunch.html', html_name=menu[random_idx], html_image=menuimg[random_idx])
 
+# dic으로
 # @app.route('/lunch')
 # def lunch():
 #     menus = {
@@ -65,6 +66,10 @@ def lunch():
 #     return render_template('lunch.html', html_name=pick, html_image=img)
     
 
+@app.route('/movies')
+def movies():
+    movies = ['겨울왕국2', '쥬만지', '포드v페라리']
+    return render_template('movies.html', movies=movies)
 
 
 if __name__ == '__main__' :

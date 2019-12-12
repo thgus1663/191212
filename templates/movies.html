@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{movies}}</h1>
+    <!--{#% 중괄호 있는 주석처리 이렇게! %#}-->
+
+    {# <!--{% 중괄호 있는 주석처리 이렇게! %}--> #}
+
+    {% for movie in movies %}
+        {% if movie=='겨울왕국2' %}
+            <li style="color:blue">{{movie}}</li>
+        {% else %}
+            <li style="color:red">{{movie}}</li>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
